@@ -111,7 +111,7 @@ dataframe.head(10)
 from sklearn.metrics import accuracy_score, classification_report
 
 y = dataframe['NObeyesdad']
-X=dataframe.drop(["CAEC", "CH2O", "SCC", "FAF", "TUE", "MTRANS", "NObeyesdad"],axis=1)
+X=dataframe.drop(["family_history_with_overweight", "FAVC", "FCVC", "NCP", "CAEC", "SMOKE", "CH2O", "SCC", "FAF", "TUE", "CALC", "MTRANS", "NObeyesdad"],axis=1)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.10, random_state=42)
 modelo = DecisionTreeClassifier(max_depth=6)
 modelo.fit(X_train, y_train)
